@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 3309:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345root
+      MYSQL_DATABASE: symfony4_space_bar
+      MYSQL_USER: symfony
+      MYSQL_PASSWORD: 12345user
+    volumes:
+      - ./docker/mysql/migrations:/docker-entrypoint-initdb.d

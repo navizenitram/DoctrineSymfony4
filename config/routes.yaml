@@ -1,0 +1,3 @@
+Article:
+    path: /admin/article/new
+    controller: App\Controller\ArticleAdminController::new
